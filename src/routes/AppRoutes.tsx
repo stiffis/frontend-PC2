@@ -4,6 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
 import { JSX } from "react";
+import TwoColumnsPage from "../pages/TwoColumnsPage";
 
 function ProtectedRoute({ children }: { children: JSX.Element }) {
   const { isAuthenticated } = useAuth();
@@ -13,7 +14,9 @@ function ProtectedRoute({ children }: { children: JSX.Element }) {
 export default function AppRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/two-columns" element={<TwoColumnsPage />}></Route>
       <Route
         path="/dashboard"
         element={
