@@ -1,0 +1,10 @@
+/*index.css*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Un ejemplo usando Catppuccin */
+/*body {*/
+/*  @layer bg-mocha-base;*/
+/*  @layer text-mocha-text;*/
+/*}*/
