@@ -32,5 +32,9 @@ export default function LoginPage() {
     }
   };
 
-  return <Login onLogin={handleLogin} error={error} loading={loading} />;
+  return (
+    <div>
+      <Login onLogin={handleLogin} error={error} loading={loading} />
+    </div>
+  );
 }
