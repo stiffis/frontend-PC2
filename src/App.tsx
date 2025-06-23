@@ -1,16 +1,11 @@
-// App.tsx
-import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
-import AppRoutes from "./routes/AppRoutes";
+import Navbar from "@components/Navbar";
+import { Outlet } from "react-router-dom";
 
-function App() {
-  return (
-    <AuthProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-    </AuthProvider>
-  );
+export default function App() {
+	return (
+		<>
+			<Navbar />
+			<Outlet />
+		</>
+	);
 }
-
-export default App;
